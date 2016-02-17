@@ -10,7 +10,7 @@
       <block type="robot_delay" id="238" inline="true">
         <value name="DELAY">
           <block type="math_number" id="239">
-            <field name="NUM">1000</field>
+            <field name="NUM">100</field>
           </block>
         </value>
       </block>
@@ -86,7 +86,7 @@
                                       <block type="robot_delay" id="124" inline="true">
                                         <value name="DELAY">
                                           <block type="math_number" id="125">
-                                            <field name="NUM">1000</field>
+                                            <field name="NUM">100</field>
                                           </block>
                                         </value>
                                       </block>
@@ -108,34 +108,74 @@
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="movement_reverse" id="334">
+                                              <block type="led_select" id="341" inline="true">
+                                                <field name="ACTION">ON</field>
+                                                <value name="LED">
+                                                  <block type="math_number" id="342">
+                                                    <field name="NUM">3</field>
+                                                  </block>
+                                                </value>
                                                 <next>
-                                                  <block type="controls_whileUntil" id="335" inline="false">
-                                                    <field name="MODE">WHILE</field>
-                                                    <value name="NUMBER">
-                                                      <block type="logic_compare" id="336" inline="true">
-                                                        <field name="OP">LT</field>
-                                                        <value name="A">
-                                                          <block type="sensor_object" id="337">
-                                                            <field name="OBJECT">REAR</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="B">
-                                                          <block type="math_number" id="338">
-                                                            <field name="NUM">50</field>
-                                                          </block>
-                                                        </value>
+                                                  <block type="led_select" id="343" inline="true">
+                                                    <field name="ACTION">ON</field>
+                                                    <value name="LED">
+                                                      <block type="math_number" id="344">
+                                                        <field name="NUM">2</field>
                                                       </block>
                                                     </value>
-                                                    <statement name="DO">
-                                                      <block type="robot_delay" id="339" inline="true">
-                                                        <value name="DELAY">
-                                                          <block type="math_number" id="340">
-                                                            <field name="NUM">1000</field>
+                                                    <next>
+                                                      <block type="movement_reverse" id="334">
+                                                        <next>
+                                                          <block type="controls_whileUntil" id="335" inline="false">
+                                                            <field name="MODE">WHILE</field>
+                                                            <value name="NUMBER">
+                                                              <block type="logic_compare" id="336" inline="true">
+                                                                <field name="OP">LT</field>
+                                                                <value name="A">
+                                                                  <block type="sensor_object" id="337">
+                                                                    <field name="OBJECT">REAR</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="math_number" id="338">
+                                                                    <field name="NUM">50</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                              <block type="robot_delay" id="339" inline="true">
+                                                                <value name="DELAY">
+                                                                  <block type="math_number" id="340">
+                                                                    <field name="NUM">100</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </statement>
+                                                            <next>
+                                                              <block type="led_select" id="345" inline="true">
+                                                                <field name="ACTION">OFF</field>
+                                                                <value name="LED">
+                                                                  <block type="math_number" id="346">
+                                                                    <field name="NUM">2</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="led_select" id="347" inline="true">
+                                                                    <field name="ACTION">OFF</field>
+                                                                    <value name="LED">
+                                                                      <block type="math_number" id="348">
+                                                                        <field name="NUM">3</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
                                                           </block>
-                                                        </value>
+                                                        </next>
                                                       </block>
-                                                    </statement>
+                                                    </next>
                                                   </block>
                                                 </next>
                                               </block>
