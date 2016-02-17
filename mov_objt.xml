@@ -66,7 +66,7 @@
                               <block type="movement_forward" id="34">
                                 <next>
                                   <block type="controls_whileUntil" id="23" inline="false">
-                                    <field name="MODE">WHILE</field>
+                                    <field name="MODE">UNTIL</field>
                                     <value name="NUMBER">
                                       <block type="logic_compare" id="93" inline="true">
                                         <field name="OP">LT</field>
@@ -127,7 +127,7 @@
                                                       <block type="movement_reverse" id="334">
                                                         <next>
                                                           <block type="controls_whileUntil" id="335" inline="false">
-                                                            <field name="MODE">WHILE</field>
+                                                            <field name="MODE">UNTIL</field>
                                                             <value name="NUMBER">
                                                               <block type="logic_compare" id="336" inline="true">
                                                                 <field name="OP">LT</field>
