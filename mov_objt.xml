@@ -2,7 +2,7 @@
   <block type="movement_forward" id="34" x="49" y="19">
     <next>
       <block type="controls_whileUntil" id="23" inline="false">
-        <field name="MODE">UNTIL</field>
+        <field name="MODE">WHILE</field>
         <value name="NUMBER">
           <block type="logic_compare" id="93" inline="true">
             <field name="OP">GT</field>
