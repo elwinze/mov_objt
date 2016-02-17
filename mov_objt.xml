@@ -1,34 +1,43 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="34" x="49" y="19">
-    <next>
-      <block type="controls_whileUntil" id="23" inline="false">
-        <field name="MODE">WHILE</field>
-        <value name="NUMBER">
-          <block type="logic_compare" id="93" inline="true">
-            <field name="OP">GT</field>
-            <value name="A">
-              <block type="sensor_object" id="71">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="106">
-                <field name="NUM">50</field>
-              </block>
-            </value>
+  <block type="controls_whileUntil" id="23" inline="false" x="51" y="73">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="logic_compare" id="93" inline="true">
+        <field name="OP">LT</field>
+        <value name="A">
+          <block type="sensor_object" id="71">
+            <field name="OBJECT">LEFTFRONT</field>
           </block>
         </value>
-        <statement name="DO">
-          <block type="robot_delay" id="124" inline="true">
+        <value name="B">
+          <block type="math_number" id="106">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="robot_delay" id="124" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="125">
+            <field name="NUM">1000</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <next>
+      <block type="movement_forward" id="34">
+        <next>
+          <block type="robot_delay" id="232" inline="true">
             <value name="DELAY">
-              <block type="math_number" id="125">
-                <field name="NUM">1000</field>
+              <block type="math_number" id="233">
+                <field name="NUM">4000</field>
               </block>
             </value>
+            <next>
+              <block type="movement_stop" id="167"></block>
+            </next>
           </block>
-        </statement>
-        <next>
-          <block type="movement_stop" id="167"></block>
         </next>
       </block>
     </next>
